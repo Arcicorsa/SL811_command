@@ -6,13 +6,15 @@ listed in NOTICE. Third-party rights and notices remain independent.
 - **poseidon-sl811hs v0.1.0 (BSD-2-Clause).** Jason S. McMullan,
   copyright 2013. The matching reference is commit
   `0fec4f8d9ebcd515fbcbe92e7e9b2dc166bf5e6c`. The exact revision originally
-  supplied is unknown. In `src/main.cpp` at initial import `1c74805`,
+  supplied is unknown. In the restored `src/main.cpp` and its
+  byte-identical archive `reference/SL811HS_Poseidon_Due_MSD_WRITE_VERIFY.ino`,
   BSD attribution applies to the PortScan disconnect fallback at lines
   382–386 as a precaution and to the XferIssue Full-Speed SOF threshold
-  and comparison at lines 602–605 and 612–613. ResetHW and ResetUSB
-  are credited as behavioral references only. Arcicorsa's original
-  portions remain under PolyForm Noncommercial 1.0.0. Preserve the
-  complete upstream copyright notice, conditions and disclaimer with
+  and comparison at lines 608–611 and 618–619. ResetHW and ResetUSB
+  are credited as behavioral references only. Arcicorsa confirmed
+  ownership of the recovered BOT, HID, RDB and diagnostic implementations.
+  The original project portions remain under PolyForm Noncommercial 1.0.0.
+  Preserve the complete upstream copyright notice, conditions and disclaimer with
   source redistributions and reproduce them in the accompanying
   materials for any future binary redistribution.
   [Pinned source](https://github.com/ezrec/poseidon-sl811hs/blob/0fec4f8d9ebcd515fbcbe92e7e9b2dc166bf5e6c/src/sl811hs.c)

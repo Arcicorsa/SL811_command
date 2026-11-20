@@ -11,21 +11,23 @@ README.md
 docs/amiga-backend.md
 docs/architecture.md
 docs/licensing-provenance.md
+docs/recovered-full-sketch-audit.md
 docs/test-results.md
 src/main.cpp
+reference/SL811HS_Poseidon_Due_MSD_WRITE_VERIFY.ino
 CONTRIBUTING.md
 THIRD-PARTY-NOTICES.md
 .gitignore (original project additions)
 platformio.ini (original project configuration changes)
 
-The grant covers only original project-owned material. In src/main.cpp,
-the disconnect fallback (lines 382–386) and the Full-Speed SOF
-threshold and comparison (lines 602–605 and 612–613) retain BSD-2-Clause
-attribution. The line numbers refer to the initial import at 1c74805,
-which still matches the source file. The complete upstream copyright
-notice, conditions and disclaimer are in
-third-party/poseidon-sl811hs-LICENSE.txt. The ResetHW and ResetUSB
-sequences are credited as behavioral references only.
+The grant covers only original project-owned material, including the
+recovered BOT, HID, RDB and diagnostic implementations as confirmed by
+Arcicorsa. The canonical src/main.cpp and archived .ino have identical
+contents. In each, the PortScan disconnect fallback (lines 382–386) and
+Full-Speed SOF threshold and comparison (lines 608–611 and 618–619)
+retain BSD-2-Clause attribution. The complete upstream copyright notice,
+conditions and disclaimer are in third-party/poseidon-sl811hs-LICENSE.txt.
+ResetHW and ResetUSB are credited as behavioral references only.
 
 The PolyForm grant excludes the BSD-2-Clause portions identified above
 and the Apache-2.0 PlatformIO scaffolding identified in

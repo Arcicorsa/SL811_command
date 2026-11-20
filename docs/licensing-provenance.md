@@ -1,5 +1,10 @@
 # SL811_command licensing provenance
 
+This report documents the initial public snapshot. In the restored C++
+source and identical archival sketch, the PortScan fallback still spans
+382–386 and the SOF material is at 608–611 and 618–619. The attribution
+scope is unchanged. See [NOTICE](../NOTICE).
+
 ## Finding
 
 The imported firmware explicitly says it follows supplied Poseidon source.
@@ -103,13 +108,13 @@ buffer loop, general register programming, activation or polling.
   Local 382–386 makes the same writes and test, with the read assigned to
   `verify` at 383 and the test at 385. This fallback remains distinguishable
   from the datasheet rule for W1C. See [upstream lines 914–916](https://github.com/ezrec/poseidon-sl811hs/blob/0fec4f8d9ebcd515fbcbe92e7e9b2dc166bf5e6c/src/sl811hs.c#L914-L916)
-  and [local line 382](../src/main.cpp#L382).
+  and [local line 382](https://github.com/Arcicorsa/SL811_command/blob/1c748053ba281410ac09d9b0b20e89a6df90a601/src/main.cpp#L382).
 - **SOF threshold.** Upstream 450 computes `(xfer->len >> 3) + 3` and
   451–452 compares remaining time inclusively. Local 605 computes
   `(length >> 3) + 3` and 612–613 applies the inclusive test to a stored read.
   The three-unit margin and inclusive comparison distinguish the formula
   from simple payload scaling. See [upstream lines 447–453](https://github.com/ezrec/poseidon-sl811hs/blob/0fec4f8d9ebcd515fbcbe92e7e9b2dc166bf5e6c/src/sl811hs.c#L447-L453)
-  and [local line 602](../src/main.cpp#L602).
+  and [local line 602](https://github.com/Arcicorsa/SL811_command/blob/1c748053ba281410ac09d9b0b20e89a6df90a601/src/main.cpp#L602).
 
 ## Historical and release evidence
 

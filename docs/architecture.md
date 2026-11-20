@@ -32,10 +32,29 @@ The comments identify `sl811hs_ResetHW()`, `sl811hs_ResetUSB()`, `sl811hs_PortSc
 
 ## Host-A transactions
 
-1. Clear stale A DONE and verify it cleared. For outbound packets, load packet RAM before programming buffer base, length, PID/endpoint and device address. The diagnostic uses buffer 0x10, endpoint 0, and addresses 0 and 1. PID nibbles are SETUP 0xD, IN 0x9 and OUT 0x1.
+1. Clear stale A DONE and verify it cleared. For outbound packets, load packet RAM before programming buffer base, length, PID/endpoint and device address. The firmware uses buffer 0x10 and addresses 0 and 1. The EP0 wrapper supplies endpoint 0, while the generalized Host-A helper accepts the endpoint nibble for bulk and interrupt transfers. PID nibbles are SETUP 0xD, IN 0x9 and OUT 0x1.
 2. Read SOF high immediately before arm. For Full-Speed the code requests SOF synchronization (control bit 0x20) when the counter is at or below `(length >> 3) + 3`. This follows the erratum workaround cited in the source. Direction OUT uses bit 0x04, DATA1 uses 0x40, and enable/arm use 0x02/0x01. Serial logging is deferred across this timing-sensitive window.
 3. Poll status with 100 µs delays for up to 500 ms per attempt and stop early when detect indicates disconnect. On completion, clear A DONE and inspect packet status and residual count. The code decodes ACK, ERROR, TIMEOUT, SEQ, SETUP, OVERFLOW, NAK and STALL. A successful IN requires ACK and the expected sequence. OUT selects its DATA PID in control and checks the ACK. The caller validates the residual before subtracting it from requested length.
-4. The retry wrapper issues at most eight attempts total. NAK waits 200 µs before retrying the same PID and toggle. A missing completion, disconnect or stale-DONE failure aborts the loop. Completed non-ACK/sequence failures without NAK also stop.
+4. The EP0 retry wrapper issues at most eight attempts total. NAK waits 200 µs before retrying the same PID and toggle. A missing completion, disconnect or stale-DONE failure aborts the loop. Completed non-ACK/sequence failures without NAK also stop.
 5. Control reads start with DATA0 SETUP and DATA1 IN. Subsequent IN packets alternate toggles on successful receipt, ending on a short packet or the requested length, followed by zero-length DATA1 OUT. SET_ADDRESS uses DATA0 SETUP and a zero-length DATA1 IN at address 0, then waits 2 ms before testing address 1. ENUM8 deliberately stops before its status stage.
 
 All commands block the serial loop until they return. ENUM18 consumes the Full-Speed initialization state and stores the descriptor and EP0 packet size only after the address-1 verification. IDENTIFY uses that state for read-only descriptor requests with a 512-byte configuration buffer and up to 16 extra string indices. The legacy MOUSE path has its own reset, packet issue and polling helpers and prints the device descriptor and VID/PID. See [Amiga backend mapping](amiga-backend.md) for how these algorithms fit the native driver.
+
+
+## Class diagnostics
+
+The shared Host-A helper services EP0, descriptor-selected BOT bulk endpoints
+and the receiver-specific HID interrupt endpoint. Bulk NAK retries use elapsed
+time and consume a toggle only after an accepted packet. BOT checks the CSW
+signature, tag, length, status and residue bounds. The shared SCSI executor
+supports no-data, IN and OUT phases. Its read-only RDB diagnostics validate
+checksums and bound linked-list walks. The write-verification command leaves
+one overwritten media block in place.
+
+HID commands add Boot and Report Protocol control requests, descriptor
+decoding and timed reports. The large six-stage capture pools are statically
+allocated. Polling and serial command handling are synchronous. The capture
+logic delays report printing until after a sampling window.
+
+The bench class diagnostics serve as reference traces. The Amiga HCI adapter
+supplies packet I/O and leaves enumeration and class handling to Poseidon.
