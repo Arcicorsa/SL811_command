@@ -1,0 +1,38 @@
+Project: SL811_command
+Project owner and licensor of original material: Arcicorsa
+Project URL: https://github.com/Arcicorsa/SL811_command
+Required Notice: Copyright 2026 Arcicorsa (https://github.com/Arcicorsa/SL811_command)
+
+The PolyForm Noncommercial License 1.0.0 in LICENSE applies to the
+project owner's original software, firmware, and accompanying original
+software documentation in these paths:
+
+README.md
+docs/amiga-backend.md
+docs/architecture.md
+docs/licensing-provenance.md
+docs/test-results.md
+src/main.cpp
+CONTRIBUTING.md
+THIRD-PARTY-NOTICES.md
+.gitignore (original project additions)
+platformio.ini (original project configuration changes)
+
+The grant covers only original project-owned material. In src/main.cpp,
+the disconnect fallback (lines 382–386) and the Full-Speed SOF
+threshold and comparison (lines 602–605 and 612–613) retain BSD-2-Clause
+attribution. The line numbers refer to the initial import at 1c74805,
+which still matches the source file. The complete upstream copyright
+notice, conditions and disclaimer are in
+third-party/poseidon-sl811hs-LICENSE.txt. The ResetHW and ResetUSB
+sequences are credited as behavioral references only.
+
+The PolyForm grant excludes the BSD-2-Clause portions identified above
+and the Apache-2.0 PlatformIO scaffolding identified in
+THIRD-PARTY-NOTICES.md. Preserve upstream terms and attribution. Redistribution of covered software must include
+the license text or official URL and all Required Notice lines supplied
+by the licensors.
+
+The license texts and hardware design materials have their own scope.
+See hardware/NOTICE for the inventory of design files under the custom
+hardware terms.

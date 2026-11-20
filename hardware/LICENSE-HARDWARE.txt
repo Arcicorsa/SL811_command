@@ -1,0 +1,128 @@
+Arcicorsa Noncommercial Hardware Design License
+Version 1.0
+
+These are custom noncommercial hardware terms. They do not qualify as
+open source hardware under the Open Source Hardware Association definition.
+
+1. Scope and acceptance
+
+"Design Files" means the original hardware design files expressly listed
+in hardware/NOTICE, including any listed schematics, PCB layouts,
+fabrication outputs, mechanical drawings and bills of materials.
+"Covered Hardware" means boards, assemblies and kits made from the Design
+Files or adaptations of them. "Licensor" means each rights holder offering
+rights under these terms. "You" means the person or organization
+exercising the permissions. By exercising those permissions, you accept
+their conditions. Separately licensed material retains its own terms.
+
+2. Personal and community permission
+
+Subject to these terms, the Licensor grants you a worldwide, royalty-free,
+nonexclusive copyright license to use, copy, study, modify and share the
+Design Files and adaptations, and, to the extent covered by that right,
+to make, have made, use and distribute Covered Hardware for noncommercial
+purposes. Permitted purposes include personal hobby use, experimentation,
+education, fabrication for friends without profit, and noncommercial
+community activity, including group PCB orders
+and fabrication for clubs, educational groups and hackerspaces. The
+purpose of an activity governs rather than the legal status of the person
+or organization. Free redistribution is permitted under these terms.
+Private modifications may be kept private.
+
+3. Community cost sharing
+
+Participants and organizers may advance, collect and reimburse actual,
+documented direct external production and shipping costs for a permitted
+personal or community batch. Eligible costs are amounts paid to outside
+suppliers for the batch, such as PCB fabrication, components, assembly,
+applicable taxes and customs charges, and actual shipping. Allocate shared
+expenses reasonably and charge each participant only their share. Account
+for supplier discounts, credits and refunds. An organizer may collect
+estimated deposits against an itemized budget and must reconcile them
+against actual costs and return any excess. Keep receipts or invoices and
+provide participants an itemized accounting on request, with unrelated
+personal information redacted.
+
+No markup, profit, margin, payment for organizer labor or time, general
+overhead, or unrelated charge may be included. This permission applies
+equally to documented cost sharing when remaining boards from a qualifying
+batch are passed on for permitted purposes, provided no cost is recovered
+twice. Ordinary supplier charges for permitted services are governed by
+section 4.
+
+4. Paid manufacturing service
+
+An individual or noncommercial group may hire a PCB manufacturer or
+assembly service to fulfill a requested personal or community batch.
+The service may receive and copy the necessary Design Files, fabricate
+and assemble the quantity reasonably needed for the order, and deliver it
+solely to or on behalf of the ordering user or group. The service may
+charge its ordinary commercial service price, including its normal margin.
+This narrow exception applies to the service fee and does not permit an
+organizer or distributor to add a margin.
+
+Before sharing the files, the ordering party must give the service these
+terms and obtain its written acceptance, including electronically. The
+service may use the files solely for the requested order. It may not
+publish the files, offer the design as a catalog product, make stock for
+resale, sell overruns, or reuse the files for any other customer or
+purpose. The service receives only the copyright and patent permissions
+needed for this limited fulfillment.
+
+5. Commercial restrictions
+
+Except for the service expressly permitted by section 4, these terms do
+not authorize commercial use or manufacture, commercial sales, product
+lines based on the Design Files, or stocking for commercial resale.
+As a condition of these permissions, you agree not to use the Design Files
+or Covered Hardware for commercial use, to operate a commercial product
+line, to manufacture for commercial distribution, to stock for commercial
+resale, or to offer, sell or distribute Covered Hardware commercially.
+Section 3 allows cost sharing only on its stated terms, without markup,
+margin or profit. Obtain separate written permission from the relevant
+rights holders for activities outside these permissions.
+
+6. Attribution and sharing
+
+When sharing any Design File or adaptation, include these terms, preserve
+applicable copyright and attribution notices, identify the original
+project and repository URL, and identify materially changed files with the
+date and nature of the changes. Offer your original changes to the shared
+Design Files to recipients under these same terms. When distributing
+Covered Hardware, provide the original project name and repository URL,
+these terms or a link to them, and a summary of material changes, if any.
+Accompanying documentation may carry those notices. Recipients obtain
+permissions directly from the relevant Licensor. These terms do not grant
+rights to imply endorsement or sponsorship.
+
+7. Limited patent permission
+
+The Licensor grants a worldwide, royalty-free, nonexclusive license under
+patent claims the Licensor controls and can license, solely for acts
+permitted by sections 2 through 4, including making, having made, using
+and supplying Covered Hardware as permitted there. The grant is limited
+to claims necessarily infringed by practicing the Design Files as
+supplied by that Licensor. It excludes claims infringed only by a
+modification or combination with other material and grants no third-party
+patent rights. If you assert in litigation that the Design Files or
+Covered Hardware infringe a patent, your patent license under these
+terms terminates.
+
+8. Termination and independently available rights
+
+Your permissions terminate if you fail to comply. If you cure a first
+violation within 30 days of receiving written notice, your permissions
+are reinstated upon cure. Termination does not affect permissions
+independently granted to recipients who comply. These terms grant only
+rights controlled by the Licensor and do not limit rights or exceptions
+available independently under applicable law. Copyright in Design Files
+does not by itself establish rights to control all manufacture or resale
+of functional hardware.
+
+9. Warranty and liability
+
+To the extent permitted by law, the Design Files are provided as is,
+without warranties, including warranties of merchantability, fitness for
+a particular purpose or noninfringement. To the extent permitted by law,
+the Licensor is not liable for damages arising from the Design Files,
+these terms or the making or use of Covered Hardware.

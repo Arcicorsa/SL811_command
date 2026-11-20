@@ -1,6 +1,6 @@
 # SL811_command
 
-An Arduino Due serial bench tool for the SL811HS USB 1.1 host controller. It exercises the parallel bus, resets the controller and USB device, and traces endpoint-zero transactions used during enumeration. It is a hardware reference for aRCiUSB, whose native AmigaOS driver will access the controller through the Amiga clockport.
+Source-available, noncommercial project. An Arduino Due serial bench tool for the SL811HS USB 1.1 host controller. It exercises the parallel bus, resets the controller and USB device, and traces endpoint-zero transactions used during enumeration. It is a hardware reference for aRCiUSB, whose native AmigaOS driver will access the controller through the Amiga clockport.
 
 ## Bench wiring
 
@@ -61,4 +61,8 @@ See [Architecture](docs/architecture.md), [Amiga backend mapping](docs/amiga-bac
 
 ## Licensing
 
-No license has been selected for this repository.
+The project makes its source publicly available for inspection and local builds. The original project software identified in [NOTICE](NOTICE) is available under the [PolyForm Noncommercial License 1.0.0](LICENSE). The license permits personal hobby use, experimentation, education, modification, and noncommercial redistribution under its terms. This project uses a source-available noncommercial license outside the OSI-approved open-source model. In the firmware, BSD-2-Clause attribution covers the PortScan disconnect fallback and the Full-Speed SOF threshold and comparison. ResetHW and ResetUSB are behavioral references. The PlatformIO scaffold retains Apache-2.0 terms. See the [third-party notices](THIRD-PARTY-NOTICES.md) for the exact scope.
+
+Any original hardware design files expressly listed in `hardware/NOTICE` are available under `hardware/LICENSE-HARDWARE.txt`. These custom noncommercial terms fall outside the Open Source Hardware Association definition. They permit personal and community fabrication, group PCB orders, free redistribution with attribution, and reimbursement of documented direct external production and shipping costs without markup. They allow a paid manufacturer to fulfill a qualifying order under limited conditions. Commercial production and sales, product lines, and stocking for commercial resale require separate permission.
+
+The initial distribution consists of source files. Build the firmware locally using the instructions above. Release BIN and ELF images are withheld pending review of the linked Arduino components and LGPL redistribution obligations.
